@@ -3,6 +3,8 @@ let links = document.querySelectorAll('a');
 let navbar = document.querySelector('.nav-container');
 let buttons = document.querySelectorAll('.btn');
 let images = document.querySelectorAll('img');
+let content = document.querySelectorAll('p');
+
 links.forEach(item => (item.addEventListener('click', e => {
     e.preventDefault();
 })))
@@ -20,6 +22,9 @@ navbar.addEventListener("mouseout", e => {
 images[0].addEventListener('mouseenter', (e)=> {
     images[0].style.border = '2px inset green';
 })
-images[0].addEventListener('mouseout', (e)=> {
+images[0].addEventListener('mouseout', e => {
     images[0].style.border = 'none';
 })
+content.forEach(item => (item.addEventListener('click', e => {
+    item.style.color = 'purple';
+})))
